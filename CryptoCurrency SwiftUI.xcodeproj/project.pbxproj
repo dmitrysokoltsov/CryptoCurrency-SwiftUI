@@ -16,6 +16,7 @@
 		E88D140828C6218E001A83C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D140728C6218E001A83C8 /* HomeView.swift */; };
 		E88D140A28C6250A001A83C8 /* TopMoversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D140928C6250A001A83C8 /* TopMoversView.swift */; };
 		E88D140C28C62518001A83C8 /* TopMoversItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D140B28C62518001A83C8 /* TopMoversItemsView.swift */; };
+		E89C451328C7D27D004570BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C451228C7D27D004570BF /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E88D140728C6218E001A83C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E88D140928C6250A001A83C8 /* TopMoversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversView.swift; sourceTree = "<group>"; };
 		E88D140B28C62518001A83C8 /* TopMoversItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemsView.swift; sourceTree = "<group>"; };
+		E89C451228C7D27D004570BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		E88D140628C6217A001A83C8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E89C451228C7D27D004570BF /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				E88D140A28C6250A001A83C8 /* TopMoversView.swift in Sources */,
 				E87E605628C659A70049D447 /* AllCoinsView.swift in Sources */,
 				E87E605828C659BA0049D447 /* AllCoinsCellView.swift in Sources */,
+				E89C451328C7D27D004570BF /* HomeViewModel.swift in Sources */,
 				E88D140828C6218E001A83C8 /* HomeView.swift in Sources */,
 				E868D02528C55264006EEF79 /* ContentView.swift in Sources */,
 				E88D140C28C62518001A83C8 /* TopMoversItemsView.swift in Sources */,
