@@ -2,6 +2,8 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     
+    @Published var coins = [Coin]()
+    
     init() {
         fetchCoinData()
     }
@@ -21,11 +23,14 @@ class HomeViewModel: ObservableObject {
                 print("Response\(respone.statusCode)")
             }
             
-            guard let data = data else {
-                return
-            }
+            guard let data = data else { return }
             
-            print("Data\(data)")
+            do {
+                let coins = try JSONDecoder().decode([Coin].self, from: data)
+                self.coins = coins
+            } catch let error {
+                print("DEBUG: decoder error \(error.localizedDescription)")
+            }
         }
         .resume()
     }

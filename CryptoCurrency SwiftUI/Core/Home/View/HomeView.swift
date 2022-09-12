@@ -8,8 +8,8 @@ struct HomeView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 TopMoversView()
-                                
-                AllCoinsView()
+                
+                AllCoinsView(viewModel: viewModel)
             }
             .navigationTitle("Live prices")
         }
