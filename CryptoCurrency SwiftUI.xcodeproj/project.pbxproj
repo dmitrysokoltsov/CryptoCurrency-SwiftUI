@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E803D24E28CF6493009607C1 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803D24D28CF6493009607C1 /* Coin.swift */; };
 		E868D02328C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868D02228C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift */; };
 		E868D02528C55264006EEF79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868D02428C55264006EEF79 /* ContentView.swift */; };
 		E868D02728C55267006EEF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E868D02628C55267006EEF79 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E803D24D28CF6493009607C1 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		E868D01F28C55264006EEF79 /* CryptoCurrency SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoCurrency SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E868D02228C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency_SwiftUIApp.swift; sourceTree = "<group>"; };
 		E868D02428C55264006EEF79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		E88D140128C62118001A83C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E803D24D28CF6493009607C1 /* Coin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E803D24E28CF6493009607C1 /* Coin.swift in Sources */,
 				E88D140A28C6250A001A83C8 /* TopMoversView.swift in Sources */,
 				E87E605628C659A70049D447 /* AllCoinsView.swift in Sources */,
 				E87E605828C659BA0049D447 /* AllCoinsCellView.swift in Sources */,
