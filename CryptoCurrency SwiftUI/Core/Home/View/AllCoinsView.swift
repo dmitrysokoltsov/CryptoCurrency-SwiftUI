@@ -14,7 +14,7 @@ struct AllCoinsView: View {
                 
                 Spacer()
                 
-                Text("Price")
+                Text("Prices")
             }
             .font(.caption)
             .foregroundColor(.gray)
@@ -22,8 +22,8 @@ struct AllCoinsView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(0..<20, id: \.self) { _ in
-                        AllCoinsCellView()
+                    ForEach(viewModel.coins) { coin in
+                        AllCoinsCellView(coin: coin)
                     }
                 }
             }

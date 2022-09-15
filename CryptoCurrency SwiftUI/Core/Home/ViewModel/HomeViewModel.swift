@@ -4,6 +4,8 @@ class HomeViewModel: ObservableObject {
     
     @Published var coins = [Coin]()
     
+    @Published var topCoinsSorted = [Coin]()
+    
     init() {
         fetchCoinData()
     }
@@ -27,11 +29,21 @@ class HomeViewModel: ObservableObject {
             
             do {
                 let coins = try JSONDecoder().decode([Coin].self, from: data)
-                self.coins = coins
+                
+                DispatchQueue.main.async {
+                    self.coins = coins
+                    self.configureTopMovingCoins()
+                }
             } catch let error {
                 print("DEBUG: decoder error \(error.localizedDescription)")
             }
         }
         .resume()
+    }
+    
+    func configureTopMovingCoins() {
+        let topMovers = coins.sorted(by: { $0.priceChangePercentage24H > $1.priceChangePercentage24H })
+        
+        self.topCoinsSorted = Array(topMovers.prefix(5))
     }
 }
