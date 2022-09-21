@@ -13,8 +13,8 @@ struct AllCoinsCellView: View {
             
             KFImage(URL(string: coin.image))
                 .resizable()
+                .scaledToFit()
                 .frame(width: 32, height: 32)
-                .foregroundColor(.orange)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(coin.name)
