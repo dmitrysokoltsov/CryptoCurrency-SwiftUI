@@ -9,6 +9,7 @@ struct TopMoversItemsView: View {
         VStack(alignment: .leading) {
             KFImage(URL(string: coin.image))
                 .resizable()
+                .scaledToFit()
                 .frame(width: 32, height: 32)
                 .foregroundColor(.orange)
             
@@ -25,9 +26,10 @@ struct TopMoversItemsView: View {
                 .font(.headline)
                 .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
         }
-        .frame(width: 140, height: 140)
-        .overlay(RoundedRectangle(cornerRadius: 10, style: .circular).stroke(LinearGradient(colors: [.yellow, .gray], startPoint: .top, endPoint: .bottom) ,lineWidth: 2))
         
+        .frame(width: 140, height: 140)
+        .overlay(RoundedRectangle(cornerRadius: 20, style: .circular).stroke(LinearGradient(colors: [.purple, .blue], startPoint: .top, endPoint: .bottom) ,lineWidth: 2))
+        .background(.ultraThinMaterial)
     }
 }
 

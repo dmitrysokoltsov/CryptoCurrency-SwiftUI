@@ -1,10 +1,3 @@
-//
-//  TopMoversView.swift
-//  CryptoCurrency SwiftUI
-//
-//  Created by Dmitry Sokoltsov on 05.09.2022.
-//
-
 import SwiftUI
 
 struct TopMoversView: View {
