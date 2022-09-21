@@ -12,8 +12,10 @@ struct HomeView: View {
                 AllCoinsView(viewModel: viewModel)
             }
             .navigationTitle("Live prices")
+            .background(Color("mainColor"))
         }
     }
+        
 }
 
 struct HomeView_Previews: PreviewProvider {
