@@ -38,9 +38,3 @@ struct AllCoinsView: View {
         .padding(10)
     }
 }
-
-//struct AllCoinsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AllCoinsView()
-//    }
-//}
