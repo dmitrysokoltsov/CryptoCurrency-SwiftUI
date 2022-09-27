@@ -47,9 +47,3 @@ struct AllCoinsCellView: View {
         .padding(.vertical, 4)
     }
 }
-
-//struct AllCoinsCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AllCoinsCellView()
-//    }
-//}
