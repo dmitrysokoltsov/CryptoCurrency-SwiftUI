@@ -1,44 +1,25 @@
 import SwiftUI
+import Combine
 
 class HomeViewModel: ObservableObject {
     
-    @Published var coins = [Coin]()
+    @Published var coins: [Coin] = []
+    @Published var topCoinsSorted: [Coin] = []
     
-    @Published var topCoinsSorted = [Coin]()
+    private let dataService = CoinDataService()
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
-        fetchCoinData()
+        addSubscribers()
     }
     
-    func fetchCoinData() {
-        let urlCoinGecho = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h"
-        
-        guard let url = URL(string: urlCoinGecho) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, respone, error in
-            if let error = error {
-                print("Error\(error.localizedDescription)")
-                return
+    func addSubscribers() {
+        dataService.$allCoins
+            .sink { [weak self] returnedCoins in
+                self?.coins = returnedCoins
+                self?.configureTopMovingCoins()
             }
-            
-            if let respone = respone as? HTTPURLResponse {
-                print("Response\(respone.statusCode)")
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let coins = try JSONDecoder().decode([Coin].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.coins = coins
-                    self.configureTopMovingCoins()
-                }
-            } catch let error {
-                print("DEBUG: decoder error \(error.localizedDescription)")
-            }
-        }
-        .resume()
+            .store(in: &cancellables)
     }
     
     func configureTopMovingCoins() {
