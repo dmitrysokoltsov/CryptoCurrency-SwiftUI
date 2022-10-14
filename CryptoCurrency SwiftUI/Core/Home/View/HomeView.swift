@@ -3,20 +3,28 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
+    @State private var showButton: Bool = true
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                TopMoversView(viewModel: HomeViewModel())
-                
-                AllCoinsView(viewModel: viewModel)
+            ZStack {
+                VStack {
+//                    HeaderHomeView()
+                    TopMoversView(viewModel: HomeViewModel())
+                    
+                    SearchBarView(text: $viewModel.serachText)
+                    
+                        ScrollView(.vertical, showsIndicators: false) {
+                           
+                            AllCoinsView(viewModel: viewModel)
+                        }
+                        .transition(.move(edge: .leading))
+                    }
+                }
             }
-            .navigationTitle("Live prices")
-            .background(Color("mainColor"))
         }
     }
-        
-}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
