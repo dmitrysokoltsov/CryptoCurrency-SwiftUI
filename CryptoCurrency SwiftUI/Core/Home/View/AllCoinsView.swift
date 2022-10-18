@@ -15,7 +15,17 @@ struct AllCoinsView: View {
                 Spacer()
                 
                 Text("Prices")
+                Button(action: {
+                    withAnimation(.linear(duration: 2.0)) {
+                        viewModel.reloadData()
+                    }
+                    print("reload")
+                }, label: {
+                    Image(systemName: "goforward")
+                })
+                .rotationEffect(Angle(degrees: viewModel.isLoading ? 360: 0), anchor: .center)
             }
+            
             .font(.caption)
             .foregroundColor(.gray)
             .padding(.horizontal, 2)
