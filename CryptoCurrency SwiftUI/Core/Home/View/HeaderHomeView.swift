@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HeaderHomeView: View {
     
-    @State private var showButton: Bool = true
+    @State var showButton: Bool = true
     
     var body: some View {
         

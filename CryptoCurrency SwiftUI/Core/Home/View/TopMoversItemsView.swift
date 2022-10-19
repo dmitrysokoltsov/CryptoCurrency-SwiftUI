@@ -20,21 +20,12 @@ struct TopMoversItemsView: View {
                 Text(coin.currentPrice.formattedCurrency())
                     .font(.caption)
                     .foregroundColor(.secondary)
-                
             }
+            
             Text(coin.priceChangePercentage24H.forrmattedPercentage())
                 .font(.headline)
                 .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
         }
-        
         .frame(width: 140, height: 140)
-        .overlay(RoundedRectangle(cornerRadius: 20, style: .circular).stroke(LinearGradient(colors: [.purple, .blue], startPoint: .top, endPoint: .bottom) ,lineWidth: 2))
-        .background(.ultraThinMaterial)
     }
 }
-
-//struct TopMoversItemsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopMoversItemsView()
-//    }
-//}
