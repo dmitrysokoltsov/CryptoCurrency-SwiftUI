@@ -7,9 +7,14 @@ class HomeViewModel: ObservableObject {
     @Published var topCoinsSorted: [Coin] = []
     @Published var isLoading: Bool = false
     @Published var serachText: String = ""
+    @Published var sortOption: SortOption = .holdings
     
     private let dataService = CoinDataService()
     private var cancellables = Set<AnyCancellable>()
+    
+    enum SortOption {
+        case rank, rankReversed, holdings, holdingsReversed, price, priceReversed
+    }
     
     init() {
         addSubscribers()
@@ -24,14 +29,20 @@ class HomeViewModel: ObservableObject {
             .store(in: &cancellables)
         
         $serachText
-            .combineLatest(dataService.$allCoins)
+            .combineLatest(dataService.$allCoins, $sortOption)
             .debounce(for: 0.3, scheduler: DispatchQueue.main)
-            .map(filterCoins)
+            .map(filterAndSortCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.coins = returnedCoins
                 self?.isLoading = false
             }
             .store(in: &cancellables)
+    }
+    
+    private func filterAndSortCoins(text: String, coins: [Coin], sort: SortOption) -> [Coin] {
+        var updatedCoins = filterCoins(text: text, coins: coins)
+            sortCoins(sort: sort, coins: &updatedCoins)
+        return updatedCoins
     }
     
     /// Filter Coins by name,symbol,id (lower case)
@@ -49,6 +60,19 @@ class HomeViewModel: ObservableObject {
             return coin.name.lowercased().contains(lowecasedText) ||
             coin.symbol.lowercased().contains(lowecasedText) ||
             coin.id.lowercased().contains(lowecasedText)
+        }
+    }
+    
+    private func sortCoins(sort: SortOption, coins: inout [Coin]) {
+        switch sort {
+        case .rank, .holdings:
+            coins.sort (by: { $0.marketCapRank < $1.marketCapRank })
+        case .rankReversed, .holdingsReversed:
+            coins.sort (by: { $0.marketCapRank > $1.marketCapRank })
+        case .price:
+            coins.sort (by: { $0.currentPrice < $1.currentPrice })
+        case .priceReversed:
+            coins.sort (by: { $0.currentPrice > $1.currentPrice })
         }
     }
     
