@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		E803D24E28CF6493009607C1 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803D24D28CF6493009607C1 /* Coin.swift */; };
 		E80BD32628E21450008C8ECE /* HeaderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BD32528E21450008C8ECE /* HeaderHomeView.swift */; };
+		E80E9EF2290A9190007952DE /* WalletConnect in Frameworks */ = {isa = PBXBuildFile; productRef = E80E9EF1290A9190007952DE /* WalletConnect */; };
 		E815786128FEFF3C00E79D1D /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815786028FEFF3C00E79D1D /* HapticManager.swift */; };
 		E818C64828F60B0500AAE77A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818C64728F60B0500AAE77A /* SearchBarView.swift */; };
 		E818C64C28F95DF100AAE77A /* UIAplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818C64B28F95DF100AAE77A /* UIAplication.swift */; };
+		E81B3F20290684E5004A3E5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B3F1F290684E5004A3E5E /* DetailView.swift */; };
 		E827CD2428DCB3B60054A08F /* TopButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827CD2328DCB3B60054A08F /* TopButtonView.swift */; };
 		E827CD2628DDD9890054A08F /* TopButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827CD2528DDD9890054A08F /* TopButtonAnimationView.swift */; };
 		E868D02328C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868D02228C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift */; };
@@ -28,7 +30,6 @@
 		E8BBBDC728EDAF8100C94BA5 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBBDC628EDAF8100C94BA5 /* NetworkingManager.swift */; };
 		E8D15F7428EB0BA900E3AF37 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D15F7328EB0BA900E3AF37 /* PortfolioView.swift */; };
 		E8D15F7728EB1A8F00E3AF37 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D15F7628EB1A8F00E3AF37 /* CoinDataService.swift */; };
-		E8ECBCCB28D895820011D6D5 /* SelectCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECBCCA28D895820011D6D5 /* SelectCoinView.swift */; };
 		E8F3850228DBA5BD00C97F37 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3850128DBA5BD00C97F37 /* Color.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		E815786028FEFF3C00E79D1D /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		E818C64728F60B0500AAE77A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		E818C64B28F95DF100AAE77A /* UIAplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplication.swift; sourceTree = "<group>"; };
+		E81B3F1F290684E5004A3E5E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E827CD2328DCB3B60054A08F /* TopButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButtonView.swift; sourceTree = "<group>"; };
 		E827CD2528DDD9890054A08F /* TopButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButtonAnimationView.swift; sourceTree = "<group>"; };
 		E868D01F28C55264006EEF79 /* CryptoCurrency SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoCurrency SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +56,6 @@
 		E8BBBDC628EDAF8100C94BA5 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		E8D15F7328EB0BA900E3AF37 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		E8D15F7628EB1A8F00E3AF37 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
-		E8ECBCCA28D895820011D6D5 /* SelectCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCoinView.swift; sourceTree = "<group>"; };
 		E8F3850128DBA5BD00C97F37 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80E9EF2290A9190007952DE /* WalletConnect in Frameworks */,
 				E882A4BB28D360610077E14F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +72,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81B3F1C290684A7004A3E5E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E81B3F1E290684C6004A3E5E /* Views */,
+				E81B3F1D290684B3004A3E5E /* ViewModels */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E81B3F1D290684B3004A3E5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81B3F1E290684C6004A3E5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81B3F1F290684E5004A3E5E /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E827CD2128DCB3690054A08F /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +198,7 @@
 		E88D140428C6216E001A83C8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E81B3F1C290684A7004A3E5E /* Detail */,
 				E88D140628C6217A001A83C8 /* ViewModel */,
 				E88D140528C62174001A83C8 /* View */,
 			);
@@ -186,7 +213,6 @@
 				E88D140B28C62518001A83C8 /* TopMoversItemsView.swift */,
 				E87E605528C659A70049D447 /* AllCoinsView.swift */,
 				E87E605728C659BA0049D447 /* AllCoinsCellView.swift */,
-				E8ECBCCA28D895820011D6D5 /* SelectCoinView.swift */,
 				E80BD32528E21450008C8ECE /* HeaderHomeView.swift */,
 				E8D15F7328EB0BA900E3AF37 /* PortfolioView.swift */,
 				E818C64728F60B0500AAE77A /* SearchBarView.swift */,
@@ -229,6 +255,7 @@
 			name = "CryptoCurrency SwiftUI";
 			packageProductDependencies = (
 				E882A4BA28D360610077E14F /* Kingfisher */,
+				E80E9EF1290A9190007952DE /* WalletConnect */,
 			);
 			productName = "CryptoCurrency SwiftUI";
 			productReference = E868D01F28C55264006EEF79 /* CryptoCurrency SwiftUI.app */;
@@ -260,6 +287,7 @@
 			mainGroup = E868D01628C55264006EEF79;
 			packageReferences = (
 				E882A4B928D360610077E14F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E80E9EF0290A9190007952DE /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */,
 			);
 			productRefGroup = E868D02028C55264006EEF79 /* Products */;
 			projectDirPath = "";
@@ -300,11 +328,11 @@
 				E89C451328C7D27D004570BF /* HomeViewModel.swift in Sources */,
 				E818C64828F60B0500AAE77A /* SearchBarView.swift in Sources */,
 				E8F3850228DBA5BD00C97F37 /* Color.swift in Sources */,
+				E81B3F20290684E5004A3E5E /* DetailView.swift in Sources */,
 				E818C64C28F95DF100AAE77A /* UIAplication.swift in Sources */,
 				E88D140828C6218E001A83C8 /* HomeView.swift in Sources */,
 				E88D140C28C62518001A83C8 /* TopMoversItemsView.swift in Sources */,
 				E827CD2628DDD9890054A08F /* TopButtonAnimationView.swift in Sources */,
-				E8ECBCCB28D895820011D6D5 /* SelectCoinView.swift in Sources */,
 				E882A4BD28D361670077E14F /* Double.swift in Sources */,
 				E868D02328C55264006EEF79 /* CryptoCurrency_SwiftUIApp.swift in Sources */,
 			);
@@ -511,6 +539,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E80E9EF0290A9190007952DE /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwiftV2";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 		E882A4B928D360610077E14F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -522,6 +558,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E80E9EF1290A9190007952DE /* WalletConnect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E80E9EF0290A9190007952DE /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnect;
+		};
 		E882A4BA28D360610077E14F /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E882A4B928D360610077E14F /* XCRemoteSwiftPackageReference "Kingfisher" */;
