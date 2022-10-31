@@ -2,16 +2,19 @@ import SwiftUI
 
 struct DetailView: View {
     
-    let coin: Coin
+    @Binding var coin: Coin?
     
-    init(coin: Coin) {
-        self.coin = coin
-        print("Init DV for \(coin.name)")
+    init(coin: Binding<Coin?>) {
+        self._coin = coin
+        print("Init DV for \(coin.wrappedValue?.name)")
     }
     
     var body: some View {
-        Text(coin.name)
+        ZStack {
+            if let coin = coin {
+                Text(coin.name )
+            }
+        }
     }
 }
-
 
