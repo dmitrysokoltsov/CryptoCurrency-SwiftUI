@@ -34,16 +34,6 @@ struct AllCoinsView: View {
                         viewModel.sortOption = viewModel.sortOption == .price   ? .priceReversed : .price
                     }
                 }
-                
-//                Button(action: {
-//                    withAnimation(.linear(duration: 2.0)) {
-//                        viewModel.reloadData()
-//                    }
-//                    print("reload")
-//                }, label: {
-//                    Image(systemName: "goforward")
-//                })
-//                .rotationEffect(Angle(degrees: viewModel.isLoading ? 360: 0), anchor: .center)
             }
             
             .font(.caption)
@@ -53,14 +43,13 @@ struct AllCoinsView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.coins) { coin in
-//                        NavigationLink {
-//                            SelectCoinView(coin: coin)
-//                        } label: {
-//                             AllCoinsCellView(coin: coin)
-//
-//                        }
-//                        .buttonStyle(.plain)
-                        AllCoinsCellView(coin: coin)
+                        
+                        NavigationLink {
+                            DetailView(coin: coin)
+                        } label: {
+                            AllCoinsCellView(coin: coin)
+                        }
+
                     }
                 }
             }
