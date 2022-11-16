@@ -4,26 +4,18 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     @State private var showButton: Bool = true
-    
-    @State private var selectedCoin: Coin? = nil
-    @State private var showDetailView: Bool = false
-    
+        
     var body: some View {
         ZStack {
             VStack {
-                HeaderHomeView()
+                //                HeaderHomeView()
                 TopMoversView(viewModel: HomeViewModel())
-                
+                    .padding(.init(top: 0, leading: 0, bottom: -40, trailing: 0))
                 SearchBarView(text: $viewModel.serachText)
-                
+                    
                 List {
-                    ForEach(viewModel.coins) { coin in
                         AllCoinsView(viewModel: viewModel)
-                            .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
-                            .onTapGesture {
-                                segue(coin: coin)
-                            }
-                    }
+                            .listRowInsets(.init(top: 0, leading: 0, bottom: 40, trailing: 0))
                 }
                 .listStyle(PlainListStyle())
                 .refreshable {
@@ -32,14 +24,6 @@ struct HomeView: View {
                 
             }
         }
-        .sheet(isPresented: $showDetailView) {
-            DetailView(coin: $selectedCoin)
-        }
-    }
-    
-    private func segue(coin: Coin) {
-        selectedCoin = coin
-        showDetailView.toggle()
     }
 }
 

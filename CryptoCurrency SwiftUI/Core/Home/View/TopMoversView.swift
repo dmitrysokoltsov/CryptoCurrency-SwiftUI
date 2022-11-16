@@ -17,7 +17,7 @@ struct TopMoversView: View {
                 }
             }
         }
-        .padding(10)
+        .padding()
     }
 }
 
